@@ -1,0 +1,161 @@
+* { box-sizing: border-box; }
+body { background: rgb(244, 202, 163); }
+
+
+.img{
+  background: url('/image/mer\ caraïbe.jpeg')no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.img::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.center{
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+}
+.center .title{
+  color: white;
+  font-size: 55px;
+  font-weight: 600;
+}
+.center .sub_title{
+  color: #fff;
+  font-size: 52px;
+  font-weight: 600;
+}
+.center .btns{
+  margin-top: 20px;
+}
+.center .btns button{
+  height: 55px;
+  width: 170px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 10px;
+  border: 2px solid white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.center .btns button a{
+  text-decoration: none;
+}
+
+.center .btns button:first-child{
+  color: #fff;
+  background: none;
+  text-decoration: none;
+}
+
+.center .btns button a:first-child{
+  color: #fff;
+}
+
+.btns button:first-child:hover{
+  background: white;
+  color: rgb(206, 76, 0);
+}
+
+.btns button:first-child a:hover{
+  color: rgb(206, 76, 0);
+}
+
+.center .btns button:last-child{
+  background: white;
+  color: black;
+}
+
+.center .btns button a:last-child{
+color: rgb(206, 76, 0);
+}
+
+.center .btns button:last-child:hover{
+    color: rgb(206, 76, 0);
+    font-size: 21px;
+}
+
+
+
+
+
+
+
+
+
+.gallery {
+ 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+ 
+ 
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+
+/* (C) GALLERY IMAGES */
+.gallery img {
+  /* (C1) DIMENSION */
+  width: 100%;
+  height: 150px; /* optional */
+  padding: 10px;
+ 
+  /* (C2) COLORS */
+  border: 1px solid #ddd;
+  background: #fff;
+ 
+  /* (C3) IMAGE RESIZE */
+  object-fit: contain;
+  position: relative;
+}
+
+
+/* gallery.css */
+/* (D) ON SMALL SCREENS - 2 IMAGES Par colonne */
+@media only screen and (max-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* (E) OPTIONAL ZOOM ON HOVER */
+.gallery img:hover {
+  z-index: 9;
+  transform: scale(1.3);
+  /* linear | ease | ease-in | ease-out | ease-in-out */
+  transition: transform ease 0.5s;
+}
+
+
+/* (F) FULLSCREEN MODE */
+.gallery img.full {
+  position: fixed;
+  top: 0; left: 0; z-index: 999;
+  width: 100vw; height: 100vh;
+  object-fit: fit;
+  background: rgba(0, 0, 0, 0.7);
+}
+.gallery img.full:hover {
+  z-index: 999;
+  transform: none;
+}

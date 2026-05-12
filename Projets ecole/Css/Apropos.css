@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+
+
+/* barre de navigation */
+
+.navbar{
+    z-index: 1;
+      text-align: right;
+      padding: 0.4rem;
+      background: rgb(206, 76, 0);
+      position: sticky;
+      top: 0;
+      overflow: hidden;
+  }
+  
+  .navbar img{
+      margin: 0;
+      padding: 0;
+      width: 5rem;
+      float: left;
+      border-radius: 50px;
+  }
+  
+  .navbar a{
+      font-size: 1.1rem;
+      text-decoration: none;
+      font-family: cursive;
+      color: white;
+      padding: 1rem;
+      transition: all 0.4s ease-in-out;
+  }
+  
+  .navbar a:hover{
+      background-color: white;
+      color: rgb(206, 76, 0);
+      border-radius: 5px;
+  }
+
+
+
+  #toggler{
+    opacity: 0;
+    display: none;
+}
+
+.hamburger{
+    display: none;
+}
+
+/* RESPONSIVITIVITÉ */
+
+@media(max-width: 768px){
+
+    .navbar{
+        padding: 1px;
+        padding: 0.5rem;
+    }
+
+    .navbar img{
+        cursor: auto;
+    }
+
+    .navbar img{
+        width: 4.2rem;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .hamburger{
+        display: block;
+        font-size: 3rem;
+        margin-top: -2rem;
+        cursor: pointer;  
+    }
+    
+    #toggler:checked + .menu{
+       display: block;
+    }
+
+    .menu a{
+        z-index: 1S;
+        display: block;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.4);
+        margin-bottom: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Corp de la page */
+
+#aboutUs {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#aboutUs img {
+    height: 350px;
+    width: 400px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.content {
+    margin: 20px 0;
+}
+
+.content h2 {
+    font-size: 50px;
+    color: rgb(255, 111, 0);
+}
+
+.content h4 {
+    font-size: 20px;
+    color: black;
+    margin: 10px 0;
+}
+
+.description {
+    color: black;
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 100;
+}
+
+.description b{
+    color: rgb(206, 76, 0);
+}
+
+.btn {
+    font-weight: bold;
+    border: 2px solid black;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all 0.4s;
+    background-color: rgb(255, 111, 0);
+}
+
+.btn a{
+    text-decoration: none;
+    color: black;
+}
+
+.btn:hover {
+    border: 2px solid rgb(255, 111, 0);
+    background: white;
+}
+
+.btn:hover a{
+    color: rgb(206, 76, 0);
+}
+
+
+
+
+/* Responsivité */
+@media screen and (max-width: 790px) {
+    #aboutUs img {
+        width: 90%;
+    }
+
+    #aboutUs {
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+}
+
+
+
+
+
+
+
+
+/* Pied de page */
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+    padding: 2rem;
+    background: rgb(206, 76, 0);
+    color: black;
+   }
+   
+   footer > div{
+    padding: 1rem;
+   }
+   
+   footer ul{
+    list-style: none;
+   }
+   
+   /* div 1 */
+   
+   footer > div:first-child input{
+    padding: 0.5rem;
+    width: 90%;
+    margin: 0.5rem 0;
+    border: none;
+   }
+   
+   footer > div:first-child input:focus{
+    outline: none;
+   }
+   
+   footer > div:first-child input[type='email']{
+    border: 1px solid white;
+    color: rgba(172, 74, 0, 0.55);
+   
+   }
+   
+   footer > div:first-child input[type='submit']{
+    background: rgb(141, 52, 0);
+    border: solid 1px;
+    color: white;
+    border-radius: 50px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+   }
+   
+   footer > div:first-child input[type='submit']:hover{
+    background: rgb(96, 35, 0);
+    color: white;
+   }
+   
+   /* div 2 */
+   footer > div:nth-child(2) ul li{
+    border-bottom: 1px dotted white;
+    margin: 0.7rem 0;
+   }
+   
+   footer > div:nth-child(2) ul li a{
+    color: black;
+    font-weight: bold;
+    transition: all 0.4s ease-in-out;
+   }
+   
+   footer > div:nth-child(2) ul li a:hover{
+    color: white;
+   }
+   
+   /* div 3 */
+   footer > div:nth-child(3) ul{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+   }
+   
+   footer > div:nth-child(3) ul li a img{
+    width: 50px;
+    font-size: 2rem;
+    transition: all 0.4s ease-in-out;
+   }
+   
+   footer > div:nth-child(3) ul li a img:hover{
+    width: 60px;
+   }
+   
+   /* div 4 */
+   footer > div:last-child{
+    grid-column: 1 / span 3;
+    border: solid 2px white;
+    border-radius: 5px;
+    background: rgb(116, 43, 0);
+    color: white;
+    text-align: center;
+   }
+   
+   @media(max-width: 768px){
+    footer{
+    grid-template-columns: 1fr;
+    padding: 0;
+    grid-gap: 0.5rem;
+    }
+   
+    footer > div:first-child{
+    text-align: center;
+    }
+   
+    footer > div:last-child{
+    grid-column: 1;
+    }
+}
